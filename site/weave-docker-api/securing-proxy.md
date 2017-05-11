@@ -8,7 +8,7 @@ If you are [connecting to the docker daemon with
 TLS](https://docs.docker.com/articles/https/), you most likely want
 to do the same when connecting to the proxy. The proxy
 automatically detects the Docker daemon's TLS configuration, and
-attempts to duplicate it. 
+attempts to duplicate it.
 
 In the standard auto-detection case you can launch a TLS-enabled proxy as follows:
 
@@ -17,7 +17,7 @@ In the standard auto-detection case you can launch a TLS-enabled proxy as follow
 To disable auto-detection of TLS configuration, you can either pass
 the `--no-detect-tls` flag, or you can manually configure the proxy's TLS using
 the same TLS-related command-line flags supplied to the Docker
-daemon. 
+daemon.
 
 For example, if you generated your certificates and keys
 into the Docker host's `/tls` directory, launch the proxy using:

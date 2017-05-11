@@ -5,13 +5,13 @@ search_type: Documentation
 ---
 
 
-When containers are created via the Weave Net proxy, their entrypoint is 
+When containers are created via the Weave Net proxy, their entrypoint is
 modified to wait for the Weave network interface to become
-available. 
+available.
 
-When they are started via the Weave Net proxy, containers are 
+When they are started via the Weave Net proxy, containers are
 [automatically assigned IP addresses](/site/ipam.md) and connected to the
-Weave network.  
+Weave network.
 
 ### Creating and Starting Containers with the Weave Net Proxy
 
@@ -39,7 +39,7 @@ variable by space-separating them, as in
 The Docker NetworkSettings (including IP address, MacAddress, and
 IPPrefixLen), are still returned when `docker inspect` is run. If you want
 `docker inspect` to return the Weave NetworkSettings instead, then the
-proxy must be launched using the `--rewrite-inspect` flag. 
+proxy must be launched using the `--rewrite-inspect` flag.
 
 This command substitutes the Weave network settings when the container has a
 Weave Net IP. If a container has more than one Weave Net IP, then the inspect call

@@ -19,10 +19,10 @@ For those situations, the proxy provides the following flags:
  * `--hostname-from-label<labelkey>`
  * `--hostname-match <regexp>`
  * `--hostname-replacement <replacement>`
- 
+
 When launching a container, the hostname is initialized to the
 value of the container label using key `<labelkey>`. If no `<labelkey>` was
-provided, then the container name is used. 
+provided, then the container name is used.
 
 Additionally, the hostname is matched against a regular expression `<regexp>` and based on that match,
 `<replacement>` is used to obtain the final hostname, and then handed over to weaveDNS for registration.
