@@ -45,13 +45,13 @@ This command substitutes the Weave network settings when the container has a
 Weave Net IP. If a container has more than one Weave Net IP, then the inspect call
 only includes one of them.
 
-    host1$ weave launch-router && weave launch-proxy --rewrite-inspect
+    host1$ weave launch --rewrite-inspect
 
 ### Multicast Traffic and Launching the Weave Proxy
 
 By default, multicast traffic is routed over the Weave network.
 To turn this off, for example, because you want to configure your own multicast
-route, add the `--no-multicast-route` flag to `weave launch-proxy`.
+route, add the `--no-multicast-route` flag to `weave launch`.
 
 ### Other Weave Proxy options
 

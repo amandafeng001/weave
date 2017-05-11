@@ -37,17 +37,14 @@ See [Dynamically Attaching and Detaching Containers](/site/using-weave/dynamical
 ### <a name="weave-api-proxy"></a>Setting Up The Weave Net Docker API Proxy
 
 The proxy sits between the Docker client (command line or API) and the
-Docker daemon, and intercepts the communication between the two. You can
-start it simultaneously with the router and weaveDNS via `launch`:
+Docker daemon, and intercepts the communication between the two.
+It is started along with the router and weaveDNS when you run:
 
     host1$ weave launch
 
-or independently via `launch-proxy`:
+**N.B.**: Prior to version 2.0, the `launch-proxy` command allowed to pass configuration options and to start the proxy independently.
+This command has been removed in 2.0 and `launch` now also accepts configuration options for the proxy.
 
-    host1$ weave launch-router && weave launch-proxy
-
-The first form is more convenient. But only `launch-proxy` can be passed configuration arguments.
-Therefore if you need to modify the default behaviour of the proxy, you must use `launch-proxy`.
 
 By default, the proxy decides where to listen based on how the
 launching client connects to Docker. If the launching client connected
@@ -56,7 +53,7 @@ the launching client connects over TCP, the proxy listens on port
 12375, on all network interfaces. This can be adjusted using the `-H`
 argument, for example:
 
-    host1$ weave launch-proxy -H tcp://127.0.0.1:9999
+    host1$ weave launch -H tcp://127.0.0.1:9999
 
 If no TLS or listening interfaces are set, TLS is auto-configured
 based on the Docker daemon's settings, and the listening interfaces are
@@ -81,14 +78,12 @@ Alternatively, the proxy host can be set on a per-command basis with
 
     host1$ docker $(weave config) ps
 
-The proxy can be stopped independently with
+The proxy can be stopped, along with the router and weaveDNS, with
 
-    host1$ weave stop-proxy
-
-or in conjunction with the router and weaveDNS via `stop`.
+    host1$ weave stop
 
 If you set your `DOCKER_HOST` to point at the proxy, you should revert
-to the original settings prior to stopping the proxy.
+to the original settings prior to running `stop`.
 
 
 **See Also**

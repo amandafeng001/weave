@@ -12,7 +12,7 @@ attempts to duplicate it.
 
 In the standard auto-detection case you can launch a TLS-enabled proxy as follows:
 
-    host1$ weave launch-proxy
+    host1$ weave launch
 
 To disable auto-detection of TLS configuration, you can either pass
 the `--no-detect-tls` flag, or you can manually configure the proxy's TLS using
@@ -22,7 +22,7 @@ daemon.
 For example, if you generated your certificates and keys
 into the Docker host's `/tls` directory, launch the proxy using:
 
-    host1$ weave launch-proxy --tlsverify --tlscacert=/tls/ca.pem \
+    host1$ weave launch --tlsverify --tlscacert=/tls/ca.pem \
              --tlscert=/tls/server-cert.pem --tlskey=/tls/server-key.pem
 
 The paths to your certificates and key must be provided as absolute

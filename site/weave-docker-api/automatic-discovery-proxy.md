@@ -29,7 +29,7 @@ Additionally, the hostname is matched against a regular expression `<regexp>` an
 
 For example, you can launch the proxy using all three flags, as follows:
 
-    host1$ weave launch-router && weave launch-proxy --hostname-from-label hostname-label --hostname-match '^aws-[0-9]+-(.*)$' --hostname-replacement 'my-app-$1'
+    host1$ weave launch --hostname-from-label hostname-label --hostname-match '^aws-[0-9]+-(.*)$' --hostname-replacement 'my-app-$1'
     host1$ eval $(weave env)
 
 >**Note:** regexp substitution groups must be pre-pended with a dollar sign
