@@ -1,5 +1,5 @@
 ---
-title: How the Weave Net Docker Network Plugin Works
+title: How the Weave Net Docker Network Plugin (Legacy) Works
 menu_order: 20
 search_type: Documentation
 ---
@@ -39,5 +39,5 @@ The plugin accepts the following options via `docker network create ... --opt`:
 
 **See Also**
 
- * [Integrating Docker via the Network Plugin](/site/plugin.md)
+ * [Integrating Docker via the Network Plugin (Legacy)](/site/plugin.md)
 

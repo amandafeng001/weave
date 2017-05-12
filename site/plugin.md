@@ -1,5 +1,5 @@
 ---
-title: Integrating Docker via the Network Plugin
+title: Integrating Docker via the Network Plugin (Legacy)
 menu_order: 60
 search_type: Documentation
 ---
@@ -114,4 +114,4 @@ If you are using `systemd` with Docker 1.9, it is advised that you modify the Do
 
 **See Also**
 
- * [How the Weave Network Plugin Works](/site/plugin/plugin-how-it-works.md)
+ * [How the Weave Network Plugin (Legacy) Works](/site/plugin/plugin-how-it-works.md)
