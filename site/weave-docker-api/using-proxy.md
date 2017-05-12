@@ -61,6 +61,13 @@ route, add the `--no-multicast-route` flag to `weave launch`.
  * `--no-restart` -- remove the default policy of `--restart=always`, if
    you want to control start-up of the proxy yourself
 
+### Disabling Weave Proxy
+
+If for some reason you need to disable the proxy, but still want to start other Weave Net components (router, weaveDNS), you can do so using:
+
+    weave launch --proxy=false
+
+
 **See Also**
 
  * [Setting Up The Weave Docker API Proxy](/site/weave-docker-api.md)
